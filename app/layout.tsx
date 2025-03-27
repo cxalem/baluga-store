@@ -26,11 +26,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} relative antialiased bg-neutral-800`}
+        className={`${geistSans.variable} ${geistMono.variable} relative antialiased bg-neutral-900`}
       >
         <nav className="w-full flex items-center justify-between py-10 max-w-7xl mx-auto z-10">
           <Image src="/logo-white.svg" alt="logo" width={180} height={100} />
-          <Button className="cursor-pointer">Connect Wallet</Button>
+          <Button className="cursor-pointer bg-neutral-800">Connect Wallet</Button>
         </nav>
         {children}
       </body>

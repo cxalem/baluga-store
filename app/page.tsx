@@ -100,65 +100,65 @@ export default function NoisePage() {
         <section className="w-full max-w-7xl mx-auto border-t border-b overflow-hidden border-neutral-100/80">
           <div className="relative flex overflow-x-hidden">
             <div className="animate-[marquee_25s_linear_infinite] whitespace-nowrap flex items-center">
-              <div className="h-10 w-[1px] bg-red-500 mx-2"></div>
+              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
               <span className="text-3xl md:text-4xl mx-2 text-neutral-100/20">
                 BALUGA-STORE
               </span>
-              <div className="h-10 w-[1px] bg-red-500 mx-2"></div>
+              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
               <span className="text-3xl md:text-4xl mx-2 text-neutral-100/20">
                 BALUGA x METAMASK
               </span>
-              <div className="h-10 w-[1px] bg-red-500 mx-2"></div>
+              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
               <span className="text-3xl md:text-4xl mx-2 text-neutral-100/20">
                 BALUGA x GAIA
               </span>
-              <div className="h-10 w-[1px] bg-red-500 mx-2"></div>
+              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
               <span className="text-3xl md:text-4xl mx-2 text-neutral-100/20">
                 BALUGA-STORE
               </span>
-              <div className="h-10 w-[1px] bg-red-500 mx-2"></div>
+              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
               <span className="text-3xl md:text-4xl mx-2 text-neutral-100/20">
                 BALUGA x METAMASK
               </span>
-              <div className="h-10 w-[1px] bg-red-500 mx-2"></div>
+              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
               <span className="text-3xl md:text-4xl mx-2 text-neutral-100/20">
                 BALUGA x GAIA
               </span>
-              <div className="h-10 w-[1px] bg-red-500 mx-2"></div>
+              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
               <span className="text-3xl md:text-4xl mx-2 text-neutral-100/20">
                 BALUGA-STORE
               </span>
             </div>
             <div className="absolute top-0 animate-[marquee2_25s_linear_infinite] whitespace-nowrap flex items-center">
-              <div className="h-10 w-[1px] bg-red-500 mx-2"></div>
+              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
               <span className="text-3xl md:text-4xl mx-2 text-neutral-100/20">
                 BALUGA-STORE
               </span>
-              <div className="h-10 w-[1px] bg-red-500 mx-2"></div>
+              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
               <span className="text-3xl md:text-4xl mx-2 text-neutral-100/20">
                 BALUGA x METAMASK
               </span>
-              <div className="h-10 w-[1px] bg-red-500 mx-2"></div>
+              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
               <span className="text-3xl md:text-4xl mx-2 text-neutral-100/20">
                 BALUGA x GAIA
               </span>
-              <div className="h-10 w-[1px] bg-red-500 mx-2"></div>
+              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
               <span className="text-3xl md:text-4xl mx-2 text-neutral-100/20">
                 BALUGA-STORE
               </span>
-              <div className="h-10 w-[1px] bg-red-500 mx-2"></div>
+              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
               <span className="text-3xl md:text-4xl mx-2 text-neutral-100/20">
                 BALUGA x METAMASK
               </span>
-              <div className="h-10 w-[1px] bg-red-500 mx-2"></div>
+              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
               <span className="text-3xl md:text-4xl mx-2 text-neutral-100/20">
                 BALUGA x GAIA
               </span>
-              <div className="h-10 w-[1px] bg-red-500 mx-2"></div>
+              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
               <span className="text-3xl md:text-4xl mx-2 text-neutral-100/20">
                 BALUGA-STORE
               </span>
-              <div className="h-10 w-[1px] bg-red-500 mx-2"></div>
+              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
             </div>
           </div>
         </section>
