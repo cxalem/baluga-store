@@ -71,7 +71,7 @@ export default function NoisePage() {
       />
 
       {/* Centered content container */}
-      <div className="relative flex flex-col gap-10 w-full h-full mx-auto text-neutral-100 uppercase px-1">
+      <div className="relative flex flex-col gap-5 md:gap-10 w-full h-full mx-auto text-neutral-100 uppercase px-1">
         <section className="w-full">
           <div className="w-full mx-auto">
             <div className="flex flex-col w-full">
