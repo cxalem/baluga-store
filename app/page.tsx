@@ -4,13 +4,16 @@ import { useEffect, useRef } from "react";
 import ProductGrid from "@/components/product-grid";
 import { products } from "@/data";
 import localFont from "next/font/local";
-
-const font = localFont({
-  src: "../public/aipointe.woff2",
-});
+import BouncingImage from "@/components/bouncing-image";
+import { Marquee } from "@/components/marquee";
 
 const font2 = localFont({
   src: "../public/FKRasterGroteskCompact-Rounded.woff2",
+  weight: "100",
+});
+
+const font3 = localFont({
+  src: "../public/caryotype-bold.woff2",
   weight: "100",
 });
 
@@ -82,32 +85,48 @@ export default function NoisePage() {
         className="absolute inset-0 w-full h-full -z-10"
       />
 
-      <div className="relative flex flex-col gap-5 md:gap-10 w-full h-full mx-auto text-neutral-100 uppercase px-1">
-        <section className="w-full">
+      <div className="flex flex-col gap-5 md:gap-10 w-full h-full mx-auto text-neutral-100 uppercase px-1">
+        <section className="relative w-full">
+          <BouncingImage
+            src="https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//abstract-element-48.png"
+            className="absolute w-[15vw] left-[10vw] h-[15vw] top-[5vw] md:left-[20vw] z-20"
+            width={150}
+            height={150}
+          />
+          <BouncingImage
+            src="https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//abstract-element-32.png"
+            className="absolute w-[10vw] h-[10vw] right-[10vw] bottom-[5vw] md:right-[20vw] z-20"
+            width={100}
+            height={100}
+          />
           <div className="w-full mx-auto">
             <div className="flex flex-col w-full">
               <h1 className="font-thin tracking-tight leading-none">
                 <span
-                  className={`block w-full text-[11vw] md:text-[11vw] lg:text-[11vw] whitespace-nowrap overflow-hidden text-neutral-100 blur-[1px] md:blur-[1.5px] ${font2.className}`}
+                  className={`block w-full text-[11vw] md:text-[11vw] lg:text-[11vw] whitespace-nowrap overflow-hidden text-neutral-100 blur-[0.7px] md:blur-[1.5px] md:tracking-wide ${font2.className}`}
                 >
-                  High Quality Web3
+                  <span className="-z-20">High</span> Quality Web3
                 </span>
                 <span
-                  className={`block w-full text-[10vw] md:text-[10vw] lg:text-[10.5vw] whitespace-nowrap overflow-hidden`}
+                  className={`block w-full text-[10vw] md:text-[10vw] lg:text-[10.3vw] whitespace-nowrap overflow-hidden`}
                 >
                   <span
-                    className={`${font2.className} blur-[1px] md:blur-[1.5px]`}
+                    className={`${font2.className} blur-[0.7px] md:blur-[1.5px] md:tracking-wide`}
                   >
                     Clothing
                   </span>{" "}
-                  <span className="font-black">For high</span>
+                  <span className={`${font3.className} font-black text-[13vw]`}>
+                    For high
+                  </span>
                 </span>
-                <span className="flex w-full text-[8vw] md:text-[8vw] lg:text-[8vw] whitespace-nowrap font-black">
+                <span
+                  className={`flex w-full text-[10vw] whitespace-nowrap font-black ${font3.className}`}
+                >
                   quality web3{" "}
-                  <span className="flex ml-[1vw]">
+                  <span className="flex ml-[1.5vw] md:ml-[1vw]">
                     <img
                       src="/b.svg"
-                      className="w-[8vw] h-[8vw] -mr-1 md:-mr-[2vw]"
+                      className="w-[8vw] h-[10vw] -mr-1 md:-mr-[2vw]"
                     />
                     <span className="mr-2">uilders</span>
                   </span>
@@ -117,75 +136,9 @@ export default function NoisePage() {
           </div>
         </section>
 
-        <section
-          className={`w-full mx-auto border-t border-b overflow-hidden border-neutral-100 ${font.className} tracking-widest blur-[1px]`}
-        >
-          <div className="relative flex overflow-x-hidden">
-            <div className="animate-[marquee_25s_linear_infinite] whitespace-nowrap flex items-center">
-              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
-              <span className="text-3xl md:text-4xl mx-1 -mb-1 text-red-100/30">
-                BALUGA-STORE
-              </span>
-              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
-              <span className="text-3xl md:text-4xl mx-1 -mb-1 text-red-100/30">
-                BALUGA x METAMASK
-              </span>
-              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
-              <span className="text-3xl md:text-4xl mx-1 -mb-1 text-red-100/30">
-                BALUGA x GAIA
-              </span>
-              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
-              <span className="text-3xl md:text-4xl mx-1 -mb-1 text-red-100/30">
-                BALUGA-STORE
-              </span>
-              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
-              <span className="text-3xl md:text-4xl mx-1 -mb-1 text-red-100/30">
-                BALUGA x METAMASK
-              </span>
-              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
-              <span className="text-3xl md:text-4xl mx-1 -mb-1 text-red-100/30">
-                BALUGA x GAIA
-              </span>
-              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
-              <span className="text-3xl md:text-4xl mx-1 -mb-1 text-red-100/30">
-                BALUGA-STORE
-              </span>
-            </div>
-            <div className="absolute top-0 animate-[marquee2_25s_linear_infinite] whitespace-nowrap flex items-center">
-              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
-              <span className="text-3xl md:text-4xl mx-1 -mb-1 text-red-100/30">
-                BALUGA-STORE
-              </span>
-              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
-              <span className="text-3xl md:text-4xl mx-1 -mb-1 text-red-100/30">
-                BALUGA x METAMASK
-              </span>
-              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
-              <span className="text-3xl md:text-4xl mx-1 -mb-1 text-red-100/30">
-                BALUGA x GAIA
-              </span>
-              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
-              <span className="text-3xl md:text-4xl mx-1 -mb-1 text-red-100/30">
-                BALUGA-STORE
-              </span>
-              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
-              <span className="text-3xl md:text-4xl mx-1 -mb-1 text-red-100/30">
-                BALUGA x METAMASK
-              </span>
-              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
-              <span className="text-3xl md:text-4xl mx-1 -mb-1 text-red-100/30">
-                BALUGA x GAIA
-              </span>
-              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
-              <span className="text-3xl md:text-4xl mx-1 -mb-1 text-red-100/30">
-                BALUGA-STORE
-              </span>
-              <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
-            </div>
-          </div>
-        </section>
+        <Marquee />
 
-        <section className="w-full max-w-7xl mx-auto mb-10">
+        <section className="w-full px-1 md:px-0 max-w-7xl mx-auto mb-10">
           <ProductGrid products={products} />
         </section>
       </div>
