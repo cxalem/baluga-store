@@ -7,15 +7,18 @@ export const products: Product[] = [
     description:
       "A stylish t-shirt with HIGH QUALITY WEB3 logo front and back print",
     basePrice: 70,
-    imageUrl: "/images/t-shirt-logo-web3.jpg",
+    imageUrl:
+      "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//t-shirt-logo-web3.jpg",
     images: {
       white: {
-        front: "/images/t-shirt-logo-web3.jpg",
-        back: "/images/t-shirt-phrase-web3.jpg",
+        front:
+          "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//t-shirt-logo-web3.jpg",
+        back: "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//t-shirt-phrase-web3.jpg",
       },
       black: {
-        front: "/images/t-shirt-logo-web3-black.jpg",
-        back: "/images/t-shirt-phrase-web3-black.jpg",
+        front:
+          "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//t-shirt-logo-web3-black.jpg",
+        back: "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//t-shirt-phrase-web3-black.jpg",
       },
     },
     variations: [
@@ -75,13 +78,16 @@ export const products: Product[] = [
     name: "High Quality Web3 Hoodie",
     description: "A comfortable hoodie with the HIGH QUALITY WEB3 logo",
     basePrice: 120,
-    imageUrl: "/images/hoodie-logo-web3-black.jpg",
+    imageUrl:
+      "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//hoodie-logo-web3-black.jpg",
     images: {
       black: {
-        front: "/images/hoodie-logo-web3-black.jpg",
+        front:
+          "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//hoodie-logo-web3-black.jpg",
       },
       white: {
-        front: "/images/hoodie-logo-web3.jpg",
+        front:
+          "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//hoodie-logo-web3.jpg",
       },
     },
     variations: [
@@ -127,13 +133,16 @@ export const products: Product[] = [
     name: "Quality Web3 Hoodie",
     description: "A comfortable hoodie with the HIGH QUALITY WEB3 logo",
     basePrice: 120,
-    imageUrl: "/images/hoodie-phrase-web3.jpg",
+    imageUrl:
+      "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//hoodie-phrase-web3.jpg",
     images: {
       black: {
-        front: "/images/hoodie-phrase-web3-black.jpg",
+        front:
+          "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//hoodie-phrase-web3-black.jpg",
       },
       white: {
-        front: "/images/hoodie-phrase-web3.jpg",
+        front:
+          "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//hoodie-phrase-web3.jpg",
       },
     },
     variations: [
