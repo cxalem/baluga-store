@@ -1,8 +1,6 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import Image from "next/image";
-import { ChevronLeft, ChevronRight } from "lucide-react";
 import type { Product, SelectedVariation } from "@/types";
 import { Button } from "@/components/ui/button";
 import {
@@ -13,6 +11,7 @@ import {
   SheetDescription,
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
+import ProductGallery from "./product-gallery";
 
 interface ProductDrawerProps {
   isOpen: boolean;
@@ -66,39 +65,13 @@ export default function ProductDrawer({
     return variation ? variation.stock : 0;
   };
 
-  // Get the appropriate image based on selected color and current view
-  const getProductImage = () => {
-    if (selectedVariation.color && product.images[selectedVariation.color]) {
-      return (
-        product.images[selectedVariation.color]?.[currentView] ||
-        product.imageUrl
-      );
-    }
-    return product.imageUrl;
-  };
-
-  // Check if back image exists for the selected color
-  const hasBackImage = () => {
-    return (
-      selectedVariation.color &&
-      product.images[selectedVariation.color] &&
-      product.images[selectedVariation.color]?.back
-    );
-  };
-
-  const toggleView = () => {
-    if (hasBackImage()) {
-      setCurrentView(currentView === "front" ? "back" : "front");
-    }
-  };
-
   const isSelectionComplete = selectedVariation.size && selectedVariation.color;
   const stockAvailable = getStockForSelection();
   const canAddToCart = isSelectionComplete && stockAvailable > 0;
 
   return (
     <Sheet open={isOpen} onOpenChange={onClose}>
-      <SheetContent className="w-full sm:max-w-md overflow-y-auto bg-neutral-900/80 md:bg-neutral-900/20 backdrop-blur-sm border-none px-4 text-white">
+      <SheetContent className="w-full sm:max-w-md overflow-y-auto bg-neutral-900/80 md:bg-neutral-900/20 backdrop-blur-md border-none px-4 text-white">
         <SheetHeader className="mb-4">
           <SheetTitle className="text-xl text-white">{product.name}</SheetTitle>
           <SheetDescription className="text-white/70">
@@ -107,82 +80,18 @@ export default function ProductDrawer({
         </SheetHeader>
 
         <div className="space-y-6">
-          <div className="relative text-neutral-700">
-            <div className="aspect-square bg-zinc-800 relative rounded-lg">
-              <Image
-                src={getProductImage() || "/placeholder.svg"}
-                alt={`${product.name} ${
-                  selectedVariation.color || ""
-                } ${currentView}`}
-                fill
-                className="object-contain transition-opacity duration-300 rounded-lg"
-              />
-            </div>
-
-            {hasBackImage() && (
-              <div className="absolute inset-x-0 bottom-4 flex justify-center gap-2">
-                <Button
-                  variant="secondary"
-                  size="sm"
-                  className={`rounded-full px-3 py-1 cursor-pointer ${
-                    currentView === "front"
-                      ? "bg-primary text-primary-foreground hover:text-neutral-200 hover:bg-neutral-800"
-                      : "bg-secondary/80"
-                  }`}
-                  onClick={() => setCurrentView("front")}
-                >
-                  Front
-                </Button>
-                <Button
-                  variant="secondary"
-                  size="sm"
-                  className={`rounded-full px-3 py-1 cursor-pointer ${
-                    currentView === "back"
-                      ? "bg-primary text-primary-foreground hover:text-neutral-200 hover:bg-neutral-800"
-                      : "bg-secondary/80"
-                  }`}
-                  onClick={() => setCurrentView("back")}
-                >
-                  Back
-                </Button>
-              </div>
-            )}
-
-            {hasBackImage() && (
-              <div className="absolute inset-y-0 left-0 flex items-center">
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="h-8 w-8 rounded-full bg-background/80 p-0 cursor-pointer"
-                  onClick={toggleView}
-                >
-                  <ChevronLeft className="h-4 w-4" />
-                  <span className="sr-only">Previous</span>
-                </Button>
-              </div>
-            )}
-
-            {hasBackImage() && (
-              <div className="absolute inset-y-0 right-0 flex items-center">
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="h-8 w-8 rounded-full bg-background/80 p-0 cursor-pointer"
-                  onClick={toggleView}
-                >
-                  <ChevronRight className="h-4 w-4" />
-                  <span className="sr-only">Next</span>
-                </Button>
-              </div>
-            )}
-
-            {hasBackImage() && (
-              <div className="absolute top-2 right-2 text-xs font-medium bg-background/80 px-2 py-1 rounded">
-                {currentView === "front" ? "Front" : "Back"}
-              </div>
-            )}
-          </div>
-
+          <ProductGallery
+            productName={product.name}
+            selectedColor={selectedVariation.color}
+            productImage={
+              selectedVariation.color
+                ? product.images[selectedVariation.color]
+                : undefined
+            }
+            defaultImage={product.imageUrl}
+            currentView={currentView}
+            setCurrentView={setCurrentView}
+          />
           <div className="space-y-4">
             <div>
               <h3 className="text-lg font-medium mb-2">Size</h3>

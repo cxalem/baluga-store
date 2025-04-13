@@ -164,7 +164,7 @@ export default function NoisePage() {
           </div>
         </section>
 
-        <section className="w-full max-w-7xl mx-auto">
+        <section className="w-full max-w-7xl mx-auto mb-10">
           <ProductGrid products={products} />
         </section>
       </div>

@@ -1,4 +1,4 @@
-import { Product } from "@/types";
+import type { Product } from "@/types";
 
 export const products: Product[] = [
   {
@@ -14,11 +14,19 @@ export const products: Product[] = [
         front:
           "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//t-shirt-logo-web3.jpg",
         back: "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//t-shirt-phrase-web3.jpg",
+        frontHighRes:
+          "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//t-shirt-logo-web3-high-res.jpg",
+        backHighRes:
+          "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//t-shirt-phrase-web3-high-res.jpg",
       },
       black: {
         front:
           "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//t-shirt-logo-web3-black.jpg",
         back: "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//t-shirt-phrase-web3-black.jpg",
+        frontHighRes:
+          "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//t-shirt-logo-web3-black-high-res.jpg",
+        backHighRes:
+          "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//t-shirt-phrase-web3-black-high-res.jpg",
       },
     },
     variations: [
@@ -84,10 +92,14 @@ export const products: Product[] = [
       black: {
         front:
           "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//hoodie-logo-web3-black.jpg",
+        frontHighRes:
+          "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//hoodie-logo-web3-blackhigh-res.jpg",
       },
       white: {
         front:
           "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//hoodie-logo-web3.jpg",
+        frontHighRes:
+          "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//hoodie-logo-web3-high-res.jpg",
       },
     },
     variations: [
@@ -139,43 +151,47 @@ export const products: Product[] = [
       black: {
         front:
           "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//hoodie-phrase-web3-black.jpg",
+        frontHighRes:
+          "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//hoodie-frase-web3-black-high-res.jpg",
       },
       white: {
         front:
           "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//hoodie-phrase-web3.jpg",
+        frontHighRes:
+          "https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//hoodie-frase-web3-high-res.jpg",
       },
     },
     variations: [
       {
-        variationId: "2-m-black",
+        variationId: "3-m-black",
         size: "M",
         color: "black",
         sku: "WH-M-BLK",
         stock: 7,
       },
       {
-        variationId: "2-l-black",
+        variationId: "3-l-black",
         size: "L",
         color: "black",
         sku: "WH-L-BLK",
         stock: 3,
       },
       {
-        variationId: "2-xl-black",
+        variationId: "3-xl-black",
         size: "XL",
         color: "black",
         sku: "WH-XL-BLK",
         stock: 5,
       },
       {
-        variationId: "2-m-white",
+        variationId: "3-m-white",
         size: "M",
         color: "white",
         sku: "WH-M-WHT",
         stock: 6,
       },
       {
-        variationId: "2-l-white",
+        variationId: "3-l-white",
         size: "L",
         color: "white",
         sku: "WH-L-WHT",

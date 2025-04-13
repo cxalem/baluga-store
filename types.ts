@@ -4,6 +4,8 @@ export type Color = "black" | "white";
 export interface ProductImage {
   front: string;
   back?: string;
+  frontHighRes?: string;
+  backHighRes?: string;
 }
 
 export interface Variation {
