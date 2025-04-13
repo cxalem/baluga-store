@@ -1,8 +1,6 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import ProductGrid from "@/components/product-grid";
-import { products } from "@/data";
 
 export default function NoisePage() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -65,13 +63,14 @@ export default function NoisePage() {
   }, []);
 
   return (
-    <div className="w-full min-h-screen overflow-hidden">
+    <div className="w-full h-screen overflow-hidden">
       {/* Noise Canvas in the background */}
       <canvas
         ref={canvasRef}
         className="absolute inset-0 w-full h-full -z-10"
       />
 
+      {/* Centered content container */}
       <div className="relative flex flex-col gap-5 md:gap-10 w-full h-full mx-auto text-neutral-100 uppercase px-1">
         <section className="w-full">
           <div className="w-full mx-auto">
@@ -98,7 +97,7 @@ export default function NoisePage() {
           </div>
         </section>
 
-        <section className="w-full mx-auto border-t border-b overflow-hidden border-neutral-100/80">
+        <section className="w-full max-w-7xl mx-auto border-t border-b overflow-hidden border-neutral-100/80">
           <div className="relative flex overflow-x-hidden">
             <div className="animate-[marquee_25s_linear_infinite] whitespace-nowrap flex items-center">
               <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
@@ -162,10 +161,6 @@ export default function NoisePage() {
               <div className="h-8 md:h-10 w-[1px] bg-red-500 mx-2"></div>
             </div>
           </div>
-        </section>
-
-        <section className="w-full max-w-7xl mx-auto">
-          <ProductGrid products={products} />
         </section>
       </div>
     </div>
