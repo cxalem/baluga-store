@@ -88,14 +88,18 @@ export default function NoisePage() {
             <div className="flex flex-col w-full">
               <h1 className="font-thin tracking-tight leading-none">
                 <span
-                  className={`block w-full text-[11vw] md:text-[11vw] lg:text-[11vw] whitespace-nowrap overflow-hidden text-neutral-100 blur-[1.5px] ${font2.className}`}
+                  className={`block w-full text-[11vw] md:text-[11vw] lg:text-[11vw] whitespace-nowrap overflow-hidden text-neutral-100 blur-[1px] md:blur-[1.5px] ${font2.className}`}
                 >
                   High Quality Web3
                 </span>
                 <span
                   className={`block w-full text-[10vw] md:text-[10vw] lg:text-[10.5vw] whitespace-nowrap overflow-hidden`}
                 >
-                  <span className={`${font2.className} blur-[1.5px]`}>Clothing</span>{" "}
+                  <span
+                    className={`${font2.className} blur-[1px] md:blur-[1.5px]`}
+                  >
+                    Clothing
+                  </span>{" "}
                   <span className="font-black">For high</span>
                 </span>
                 <span className="flex w-full text-[8vw] md:text-[8vw] lg:text-[8vw] whitespace-nowrap font-black">
