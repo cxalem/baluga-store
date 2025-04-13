@@ -9,19 +9,21 @@ export default function BouncingImage({
   width = 150,
   height = 150,
   animate = { y: [0, -10, 0] },
+  duration = 4,
 }: {
   src: string;
   className: string;
   width?: number;
   height?: number;
   animate?: { y: number[]; x?: number[] };
+  duration?: number;
 }) {
   return (
     <motion.div
       className={`${className}`}
       animate={animate}
       transition={{
-        duration: 4,
+        duration: duration,
         ease: "easeInOut",
         repeat: Number.POSITIVE_INFINITY,
       }}

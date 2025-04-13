@@ -96,6 +96,8 @@ export default function NoisePage() {
           <BouncingImage
             src="https://cnimmkaefpcfmcihwjhc.supabase.co/storage/v1/object/public/images//abstract-element-32.png"
             className="absolute w-[10vw] h-[10vw] right-[10vw] bottom-[5vw] md:right-[20vw] z-20"
+            animate={{ y: [0, 15, 0] }}
+            duration={5}
             width={100}
             height={100}
           />
