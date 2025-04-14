@@ -121,3 +121,21 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Glitch effect styles */
+.glitch-text {
+  position: relative;
+  display: inline-block;
+}
+
+.glitch-clone-1 {
+  animation: glitch-anim 500ms infinite linear alternate-reverse;
+  text-shadow: 1px 0 #ff00ea;
+  left: 2px;
+}
+
+.glitch-clone-2 {
+  animation: glitch-anim 375ms infinite linear alternate-reverse;
+  text-shadow: -1px 0 #00fff9;
+  left: -2px;
+}
