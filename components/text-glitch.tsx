@@ -15,10 +15,10 @@ interface TextGlitchProps {
 export default function TextGlitch({
   children,
   className,
-  glitchProbability = 0.7,
+  glitchProbability = 0.4,
   minInterval = 2000,
   maxInterval = 8000,
-  glitchDuration = 450,
+  glitchDuration = Math.floor(Math.random() * (1400 - 500)) + 850,
 }: TextGlitchProps) {
   const [isGlitching, setIsGlitching] = useState(false);
 
